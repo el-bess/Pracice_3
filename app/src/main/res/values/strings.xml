@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EJornal</string>
+
+    <string name="enterr">Добро пожаловать в дневник!</string>
+    <string name="logIn">Вы вошли под логином:</string>
+</resources>
+
