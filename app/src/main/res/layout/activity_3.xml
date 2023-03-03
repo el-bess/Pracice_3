@@ -64,9 +64,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.6">
+        app:layout_constraintVertical_bias="0.619">
 
         <TextView
             android:id="@+id/textView"
@@ -89,7 +90,8 @@
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:gravity="center"
-            android:text="Назад" />
+            android:fontFamily="@font/aubrey_pro"
+            android:text="Вернуться назад" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

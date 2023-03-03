@@ -79,7 +79,7 @@
             android:fontFamily="@font/aubrey_pro"
             android:text="@string/logIn"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/showLogin"
