@@ -25,7 +25,6 @@ public class SecondActivity extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.showLogin);
         Intent intent = getIntent();
-
         String name = intent.getStringExtra("name");
 
         textView.setText(name);

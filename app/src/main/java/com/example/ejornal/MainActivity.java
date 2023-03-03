@@ -34,13 +34,9 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v){
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
             intent.putExtra("name", editText.getText().toString());
-            Log.i(TAG,"Programno");
             startActivity(intent);
         }
     };
-    public void showLog (View v){
-        Log.i(TAG,"Declarativno");
-    }
     View.OnClickListener onclBtAutor=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
