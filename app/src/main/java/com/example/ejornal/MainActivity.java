@@ -24,9 +24,29 @@ public class MainActivity extends AppCompatActivity {
 
         Button BtEnter = (Button) findViewById(R.id.btEnter);//Кнопка войти
         editText = (EditText) findViewById(R.id.editName);//Ввод логина
+        BtEnter.setOnClickListener(onclBtEnter);
 
         Button BtAutor = (Button) findViewById(R.id.btAutor);//Кнопка авторизироваться
-
+        BtAutor.setOnClickListener(onclBtAutor);
     }
+    View.OnClickListener onclBtEnter=new View.OnClickListener() {
+        @Override
+        public void onClick(View v){
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            intent.putExtra("name", editText.getText().toString());
+            Log.i(TAG,"Programno");
+            startActivity(intent);
+        }
+    };
+    public void showLog (View v){
+        Log.i(TAG,"Declarativno");
+    }
+    View.OnClickListener onclBtAutor=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this, Activity3.class);
 
+            startActivity(intent);
+        }
+    };
 }
