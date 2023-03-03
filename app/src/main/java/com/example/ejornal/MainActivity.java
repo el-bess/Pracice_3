@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.ejornal.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "tag";
 
@@ -20,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        Button BtEnter = (Button) findViewById(R.id.btEnter);//Кнопка войти
-        editText = (EditText) findViewById(R.id.editName);//Ввод логина
-        BtEnter.setOnClickListener(onclBtEnter);
+        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        Button BtAutor = (Button) findViewById(R.id.btAutor);//Кнопка авторизироваться
-        BtAutor.setOnClickListener(onclBtAutor);
+        editText = binding.editName;//Ввод логина
+        binding.btEnter.setOnClickListener(onclBtEnter);
+
+        binding.btAutor.setOnClickListener(onclBtAutor);//Кнопка авторизироваться
     }
     View.OnClickListener onclBtEnter=new View.OnClickListener() {
         @Override
