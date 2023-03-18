@@ -6,7 +6,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="blue">#FF57A4FE</color>
-    <color name="blueInv">#6057A4FE</color>
+    <color name="blue">#FF3e91fe</color>
+    <color name="blueInv">#603e91fe</color>
 </resources>
 

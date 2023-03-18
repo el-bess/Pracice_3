@@ -87,6 +87,21 @@
             app:srcCompat="@drawable/basketball" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textView2"
+        android:textSize="@dimen/str_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:fontFamily="@font/aubrey_pro"
+        android:gravity="center"
+        android:text="@string/enterr"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
     <Button
         android:id="@+id/btEnter"
         android:layout_width="wrap_content"
@@ -124,6 +139,7 @@
         android:layout_marginBottom="12dp"
         android:ems="10"
         android:hint="Пароль"
+        android:fontFamily="@font/aubrey_pro"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/btEnter"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
@@ -136,28 +152,30 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Логин"
+        android:fontFamily="@font/aubrey_pro"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/showHobby"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/showHobby"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
+        android:layout_gravity="center"
         android:fontFamily="@font/aubrey_pro"
         android:gravity="center"
-        android:text="@string/enterr"
+        android:text=""
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="14sp"
+        app:flow_horizontalAlign="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/editName"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.855" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="@dimen/h_margin"
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:orientation="horizontal"
@@ -62,8 +62,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
+        android:layout_margin="@dimen/h_margin"
+        android:layout_marginStart="@dimen/h_margin"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
@@ -89,7 +89,26 @@
             android:fontFamily="@font/aubrey_pro"
             android:text=""
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:textColor="@color/white"
+            android:fontFamily="@font/aubrey_pro"
+            android:text="Какое хобби ты выберешь сегодня?"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/editHobby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="18sp"
+            android:fontFamily="@font/aubrey_pro"
+            android:inputType="textPersonName"
+            android:hint="Твой выбор?" />
 
         <Button
             android:id="@+id/btnBack"

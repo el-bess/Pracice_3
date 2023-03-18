@@ -14,18 +14,20 @@ import android.widget.TextView;
 
 import com.example.ejornal.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
     public static final String TAG = "tag";
-
     EditText editText;
+    TextView hobbyName;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        hobbyName=binding.showHobby;
         editText = binding.editName;//Ввод логина
         binding.btEnter.setOnClickListener(onclBtEnter);
 
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v){
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
             intent.putExtra("name", editText.getText().toString());
-            startActivity(intent);
+            startActivityForResult(intent,1);
         }
     };
     View.OnClickListener onclBtAutor=new View.OnClickListener() {
@@ -46,4 +48,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     };
+    protected void onActivityResult(int recCode, int resCode, Intent data) {
+
+        super.onActivityResult(recCode, resCode, data);
+        if (data == null){
+            return;
+        } String name = data.getStringExtra("name");
+        hobbyName.setText("В прошлый раз вы выбрали это хоббби: "+name+". Что будет сегодня?");
+
+    }
+
 }
