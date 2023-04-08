@@ -44,7 +44,6 @@ public class MyCustomRecyclerViewAdapter extends RecyclerView.Adapter<MyCustomRe
         });
     }
 
-    @Override
     public int getItemCount() {
         return shcools.size();
     }
