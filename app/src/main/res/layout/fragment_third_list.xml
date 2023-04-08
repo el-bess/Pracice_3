@@ -18,97 +18,115 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/background_2" />
 
+
     <LinearLayout
-        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/h_margin"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:layout_gravity="top"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_margin="10dp"
+        android:layout_marginStart="@dimen/h_margin"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.4">
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/h_margin"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:layout_gravity="top"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView15"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/star_gazing"
-            />
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/star_gazing"
+                />
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/headphones"
-            />
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/headphones"
+                />
 
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/film" />
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/film" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/archery" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/archery" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/h_margin"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aubrey_pro"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            app:layout_constraintVertical_bias="0.434">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/h_margin"
+                android:layout_marginTop="@dimen/h_margin"
+                android:layout_marginEnd="@dimen/h_margin"
+                android:layout_marginBottom="@dimen/h_margin"
+                android:background="@color/blue"
+                android:fontFamily="@font/aubrey_pro"
+                android:gravity="center"
+                android:text="Для того, чтобы зарегистрироваться обратитесь в ваше образовательное учреждение."
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/h_margin"
+                android:layout_marginTop="@dimen/h_margin"
+                android:layout_marginEnd="@dimen/h_margin"
+                android:layout_marginBottom="@dimen/h_margin"
+                android:fontFamily="@font/aubrey_pro"
+                android:gravity="center"
+                android:text="Вернуться назад" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="@dimen/h_margin"
-        android:layout_gravity="center"
-        android:fontFamily="@font/aubrey_pro"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.434">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/h_margin"
-            android:layout_marginTop="@dimen/h_margin"
-            android:layout_marginEnd="@dimen/h_margin"
-            android:layout_marginBottom="@dimen/h_margin"
-            android:background="@color/blue"
-            android:fontFamily="@font/aubrey_pro"
-            android:gravity="center"
-            android:text="Для того, чтобы зарегистрироваться обратитесь в ваше образовательное учреждение."
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/btnBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/h_margin"
-            android:layout_marginTop="@dimen/h_margin"
-            android:layout_marginEnd="@dimen/h_margin"
-            android:layout_marginBottom="@dimen/h_margin"
-            android:fontFamily="@font/aubrey_pro"
-            android:gravity="center"
-            android:text="Вернуться назад" />
-    </RelativeLayout>
 
 </FrameLayout>

@@ -17,51 +17,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/background_2_2" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/h_margin"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView20"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/film" />
-
-        <ImageView
-            android:id="@+id/imageView19"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/skateboard" />
-
-        <ImageView
-            android:id="@+id/imageView17"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/kayak" />
-
-        <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/toy_machine" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/h_margin"
+        android:layout_margin="10dp"
         android:layout_marginStart="@dimen/h_margin"
         android:orientation="vertical"
         android:layout_gravity="center"
@@ -71,6 +32,46 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         app:layout_constraintVertical_bias="0.4">
 
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/h_margin"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/film" />
+
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/skateboard" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/kayak" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/toy_machine" />
+        </LinearLayout>
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
@@ -91,25 +92,6 @@
             android:textColor="@color/white"
             android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/blue"
-            android:fontFamily="@font/aubrey_pro"
-            android:text="Какое хобби ты выберешь сегодня?"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/editHobby"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="@font/aubrey_pro"
-            android:hint="Твой выбор?"
-            android:inputType="textPersonName"
-            android:textSize="18sp" />
-
         <Button
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
@@ -117,6 +99,10 @@
             android:fontFamily="@font/aubrey_pro"
             android:text="Вернуться обртно"
             android:textSize="15sp" />
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </FrameLayout>
