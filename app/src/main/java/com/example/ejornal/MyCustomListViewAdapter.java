@@ -21,7 +21,6 @@ public class MyCustomListViewAdapter extends ArrayAdapter<String> {
         this.layout = resource;
         this.inflater = LayoutInflater.from(context);
     }
-
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = inflater.inflate(this.layout, parent, false);
 

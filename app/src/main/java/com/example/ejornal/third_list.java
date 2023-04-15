@@ -31,7 +31,6 @@ public class third_list extends Fragment {
         binding = FragmentThirdListBinding.inflate(inflater, container,false);
         return binding.getRoot();
     }
-
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
@@ -39,7 +38,6 @@ public class third_list extends Fragment {
         for (int i = 0; i < 300; i++){
             school_arr.add("Школа № " + (i+1));
         }
-
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
         binding.recyclerView.setLayoutManager(layoutManager);
