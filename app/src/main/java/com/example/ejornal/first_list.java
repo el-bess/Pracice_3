@@ -6,8 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 
 import com.example.ejornal.databinding.FirstListBinding;
 
@@ -29,22 +28,17 @@ public class first_list extends Fragment {
     public void onViewCreated( View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        FragmentManager fragmentManager = getParentFragmentManager();
         binding.btEnter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                FragmentTransaction fragmentTransaction;
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container_view, new sec_list());
-                fragmentTransaction.commit();
+                Bundle bundle = new Bundle();
+//              bundle.putString("bundleKey", binding.textNameInformation.getText().toString());
+                Navigation.findNavController(view).navigate(R.id.action_first_list_to_sec_list, bundle);
             }
         });
 
         binding.btAutor.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                FragmentTransaction fragmentTransaction;
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container_view, new third_list());
-                fragmentTransaction.commit();
+                Navigation.findNavController(view).navigate(R.id.action_first_list_to_third_list);
             }
         });
     }
