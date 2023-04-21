@@ -31,13 +31,15 @@ public class first_list extends Fragment {
         binding.btEnter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Bundle bundle = new Bundle();
-//              bundle.putString("bundleKey", binding.textNameInformation.getText().toString());
+                bundle.putString("bundleKey", "Navigation text");
                 Navigation.findNavController(view).navigate(R.id.action_first_list_to_sec_list, bundle);
             }
         });
 
         binding.btAutor.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putString("bundleKey", "Navigation text");
                 Navigation.findNavController(view).navigate(R.id.action_first_list_to_third_list);
             }
         });
