@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".sec_list">
+    tools:context=".ui.fragments.sec_list">
 
     <ImageView
         android:id="@+id/imageView6"

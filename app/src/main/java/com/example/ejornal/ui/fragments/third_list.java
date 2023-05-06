@@ -1,4 +1,4 @@
-package com.example.ejornal;
+package com.example.ejornal.ui.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.example.ejornal.ui.adapters.MyCustomRecyclerViewAdapter;
+import com.example.ejornal.R;
 import com.example.ejornal.databinding.FragmentThirdListBinding;
 
 import java.util.ArrayList;

@@ -6,7 +6,7 @@
     app:startDestination="@id/first_list">
     <fragment
         android:id="@+id/first_list"
-        android:name="com.example.ejornal.first_list"
+        android:name="com.example.ejornal.ui.fragments.first_list"
         android:label="first_list"
         tools:layout="@layout/first_list">
         <action
@@ -18,13 +18,13 @@
     </fragment>
     <fragment
         android:id="@+id/sec_list"
-        android:name="com.example.ejornal.sec_list"
+        android:name="com.example.ejornal.ui.fragments.sec_list"
         android:label="fragment_sec_list"
         tools:layout="@layout/fragment_sec_list">
     </fragment>
     <fragment
         android:id="@+id/third_list"
-        android:name="com.example.ejornal.third_list"
+        android:name="com.example.ejornal.ui.fragments.third_list"
         android:label="fragment_third_list"
         tools:layout="@layout/fragment_third_list">
 

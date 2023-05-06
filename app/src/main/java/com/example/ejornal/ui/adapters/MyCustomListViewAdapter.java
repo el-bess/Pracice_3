@@ -1,4 +1,4 @@
-package com.example.ejornal;
+package com.example.ejornal.ui.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.ejornal.R;
 
 import java.util.List;
 

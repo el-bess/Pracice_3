@@ -1,4 +1,4 @@
-package com.example.ejornal;
+package com.example.ejornal.ui.adapters;
 
 import android.content.Context;
 import android.util.Log;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.ejornal.R;
 
 import java.util.List;
 

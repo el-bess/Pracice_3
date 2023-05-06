@@ -1,4 +1,4 @@
-package com.example.ejornal;
+package com.example.ejornal.ui.fragments;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -15,6 +15,8 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 
+import com.example.ejornal.MyService;
+import com.example.ejornal.R;
 import com.example.ejornal.databinding.FirstListBinding;
 
 public class first_list extends Fragment {
