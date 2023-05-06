@@ -24,6 +24,7 @@ public class first_list extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "Channel";
             String description = "Channel FOR NOTIFICATIONS";

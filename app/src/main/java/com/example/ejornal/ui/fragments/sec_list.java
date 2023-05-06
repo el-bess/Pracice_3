@@ -7,12 +7,13 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
-import com.example.ejornal.ui.adapters.MyCustomListViewAdapter;
 import com.example.ejornal.R;
 import com.example.ejornal.databinding.FragmentSecListBinding;
+import com.example.ejornal.ui.adapters.MyCustomListViewAdapter;
+import com.example.ejornal.ui.viewmodels.SchoolViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +21,11 @@ import java.util.List;
 public class sec_list extends Fragment {
     FragmentSecListBinding binding;
     Button butt_not;
+    SchoolViewModel model;
+    private SchoolViewModel randomSchool;
+
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
     public sec_list() {
@@ -30,6 +34,11 @@ public class sec_list extends Fragment {
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        model = new ViewModelProvider(this).get(SchoolViewModel.class);
+        model.getSchool().observe(getViewLifecycleOwner(), randomPet -> {
+            binding.textView3.setText((CharSequence) randomSchool.getSchool());
+        });
 
         List<String> hobby_arr = new ArrayList<String>();
         for (int i = 0; i < 300; i++) {
